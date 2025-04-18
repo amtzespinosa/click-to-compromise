@@ -2,6 +2,12 @@
 
 [This article]() is a deep dive into the **Click-to-Compromise** technique: a minimal-interaction, post-phishing attack chain that transitions from a single PowerShell command into full system compromise. It’s designed for red teamers, malware analysts, adversary emulation professionals, and curious defenders looking to understand modern evasion techniques beyond script kiddie noise.
 
+## The attack chain
+
+<div align="center"> 
+  <img src="/resources/attack_chain.png" alt="" />
+</div>
+
 ## The files
 
 - **C2 folder:** contains the source code I have used within an IDE (IntelliJ IDEA) to run the C2.
@@ -122,6 +128,14 @@ docker cp persist.ps1 clickfix:/usr/share/nginx/html/payloads/
 
 For the victim, I used a VirtualBox VM running **Windows 11 (24H2)** in bridged adapter mode. Then I just installed Chrome to access the website.
 
+#### VM config
+
+<div align="left"> 
+  <img src="/resources/win_11_setup.png" width="500" alt="" />
+</div>
+
 ## The attack
 
 Once everything is running and tested, let's infect the victim machine. To do so, inside your victim VM just visit your malicious website and follow the prompt as an innocent victim would. If you did everything right, you should see how the files get downloaded in the Desktop and, after a minute or so, how the agent appears in your C2 agents panel at **/server/agents**.
+
+
