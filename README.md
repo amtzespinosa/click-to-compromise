@@ -5,8 +5,8 @@
 ## The files
 
 - **C2 folder:** contains the source code I have used within an IDE (IntelliJ IDEA) to run the C2.
-- **Website folder:** contains the web files and payloads ready to host in a server.
-- **Payloads folder:** contains the *.ps1* files.
+- **website folder:** contains the web files ready to host in a server.
+- **payloads folder:** contains the *.ps1* files.
 
 ## The setup
 
@@ -98,7 +98,7 @@ This will list your running containers, identify your server conatiner name. Nex
 mkdir /usr/share/nginx/html/payloads
 ```
 
-Then, paste copy the files with this commands:
+Then, launch a terminal inside your website folder and copy the files into your server Docker container with this commands:
 
 ```
 docker cp index.html clickfix:/usr/share/nginx/html/
@@ -107,7 +107,11 @@ docker cp payloads.html clickfix:/usr/share/nginx/html/
 docker cp turnstyle.css clickfix:/usr/share/nginx/html/
 docker cp turnstile_gif.gif clickfix:/usr/share/nginx/html/
 docker cp recaptcha.png clickfix:/usr/share/nginx/html/
+```
 
+Now, launch a terminal inside your payloads folder and copy the files into your server Docker container with this commands::
+
+```
 docker cp cloudflare.verification.ps1 clickfix:/usr/share/nginx/html/payloads/
 docker cp infoexfil.ps1 clickfix:/usr/share/nginx/html/payloads/
 docker cp persist.ps1 clickfix:/usr/share/nginx/html/payloads/
