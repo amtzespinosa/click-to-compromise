@@ -138,4 +138,4 @@ For the victim, I used a VirtualBox VM running **Windows 11 (24H2)** in bridged 
 
 Once everything is running and tested, let's infect the victim machine. To do so, inside your victim VM just visit your malicious website and follow the prompt as an innocent victim would. If you did everything right, you should see how the files get downloaded in the Desktop and, after a minute or so, how the agent appears in your C2 agents panel at **/server/agents**.
 
-
+[![Watch the video](https://raw.githubusercontent.com/amtzespinosa/click-to-compromise/main/resources/attack_chain.png)](https://raw.githubusercontent.com/amtzespinosa/click-to-compromise/main/resources/PoC.mp4)
