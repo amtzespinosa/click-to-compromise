@@ -10,7 +10,7 @@
 
 ## The files
 
-- **C2 folder:** contains the source code I have used within an IDE (IntelliJ IDEA) to run the C2.
+- **c2-server folder:** contains the source code I have used within an IDE (IntelliJ IDEA) to run the C2.
 - **website folder:** contains the web files ready to host in a server.
 - **payloads folder:** contains the *.ps1* files.
 
